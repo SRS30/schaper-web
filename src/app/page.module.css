@@ -66,6 +66,10 @@
   animation-delay: 0.6s;
 }
 
+.sub2Wrapper {
+  margin-top: -10px;
+}
+
 .sub2 {
   animation-delay: 0.7s;
 }

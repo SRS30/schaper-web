@@ -30,7 +30,7 @@ export default function HomePage() {
           </p>
         </div>
         
-        <div className={styles.textStrapper}>
+        <div className={`${styles.textStrapper} ${styles.sub2Wrapper}`}>
           <p className={`${styles.subtitle} ${styles.sub2}`}>
             Scroll down to see some.
           </p>
