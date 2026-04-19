@@ -30,7 +30,7 @@
 .logo {
   width: clamp(80px, 10vw, 110px);
   height: auto;
-  filter: saturate(1.1);
+  filter: saturate(1.4) brightness(1.08) drop-shadow(0 4px 18px rgba(0,0,0,0.18));
 }
 
 .textStrapper {
@@ -108,9 +108,11 @@
 }
 
 @keyframes a-jelly {
-  0% { transform: scale(0); opacity: 0; }
-  70% { transform: scale(1.1); opacity: 1; }
-  100% { transform: scale(1); opacity: 1; }
+  0%   { transform: scale(0);    opacity: 0; }
+  55%  { transform: scale(1.18); opacity: 1; }
+  72%  { transform: scale(0.94); opacity: 1; }
+  85%  { transform: scale(1.07); opacity: 1; }
+  100% { transform: scale(1);    opacity: 1; }
 }
 
 @keyframes a-popUp {
