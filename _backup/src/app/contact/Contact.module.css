@@ -1,0 +1,140 @@
+.wrapper {
+  background-color: var(--white);
+  color: var(--black);
+  min-height: calc(100vh - 120px);
+  padding: 6rem 4rem;
+  position: relative;
+  /* Main content area rounding */
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  margin-top: 2rem; /* Adjusted base position */
+  width: calc(100% - 2rem);
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 5;
+}
+
+/* The "Tab" part that sticks up */
+.wrapper::after {
+  content: '';
+  position: absolute;
+  top: -40px; /* How much it sticks up */
+  left: 0;
+  width: 350px; /* Adjust based on logo + text width */
+  height: 40px;
+  background-color: var(--white);
+  border-top-left-radius: 40px;
+}
+
+/* The concave notch on the right of the tab */
+.wrapper::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  left: 350px;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-bottom-left-radius: 40px;
+  box-shadow: -10px 10px 0 0 var(--white);
+  z-index: 6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 4rem;
+  margin-bottom: 4rem;
+  color: var(--black);
+  font-weight: 900;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  margin-bottom: 6rem;
+}
+
+.section {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 2rem;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  color: var(--black);
+  margin-bottom: 2rem;
+  font-weight: 800;
+}
+
+.content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--black);
+  font-weight: 500;
+}
+
+.phone, .email {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.socials {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.socialIcon {
+  width: 48px;
+  height: 48px;
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.socialIcon:hover {
+  background-color: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+}
+
+.socialIcon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.ctaWrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4rem;
+}
+
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .heading {
+    font-size: 2.5rem;
+  }
+  
+  .ctaWrapper {
+    justify-content: center;
+  }
+}

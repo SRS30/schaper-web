@@ -1,0 +1,29 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Black Bread-slice Shape -->
+  <path d="M 60 140 
+           C 60 80, 130 50, 200 80 
+           C 270 50, 340 80, 340 140 
+           L 340 330 
+           C 340 365, 315 385, 275 385 
+           L 125 385 
+           C 85 385, 60 365, 60 330 
+           Z" fill="#171616" />
+
+  <!-- Letters Group -->
+  <g font-family="'Inter', 'Arial Rounded MT Bold', 'Helvetica Rounded', sans-serif" font-weight="900" text-anchor="middle" letter-spacing="-4">
+    
+    <!-- Row 1: S C H -->
+    <text x="130" y="165" font-size="88" fill="#5461C8" transform="rotate(-3, 130, 165)" style="paint-order: stroke; stroke: #171616; stroke-width: 4px; stroke-linejoin: round;">S</text>
+    <text x="200" y="165" font-size="88" fill="#C724B1" style="paint-order: stroke; stroke: #171616; stroke-width: 4px; stroke-linejoin: round;">C</text>
+    <text x="270" y="165" font-size="88" fill="#E4002B" transform="rotate(2, 270, 165)" style="paint-order: stroke; stroke: #171616; stroke-width: 4px; stroke-linejoin: round;">H</text>
+    
+    <!-- Row 2: A P (Taller/Wider) -->
+    <text x="155" y="275" font-size="115" fill="#F6BE00" transform="rotate(2, 155, 275)" style="paint-order: stroke; stroke: #171616; stroke-width: 6px; stroke-linejoin: round;">A</text>
+    <text x="245" y="275" font-size="115" fill="#FF6900" transform="rotate(-2, 245, 275)" style="paint-order: stroke; stroke: #171616; stroke-width: 6px; stroke-linejoin: round;">P</text>
+    
+    <!-- Row 3: E R -->
+    <text x="155" y="365" font-size="100" fill="#97D700" transform="rotate(-2, 155, 365)" style="paint-order: stroke; stroke: #171616; stroke-width: 5px; stroke-linejoin: round;">E</text>
+    <text x="245" y="365" font-size="100" fill="#00AB84" transform="rotate(3, 245, 365)" style="paint-order: stroke; stroke: #171616; stroke-width: 5px; stroke-linejoin: round;">R</text>
+    
+  </g>
+</svg>

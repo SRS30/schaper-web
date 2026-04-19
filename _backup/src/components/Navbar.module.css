@@ -1,0 +1,102 @@
+.navbar {
+  width: 100%;
+  background-color: var(--black);
+  color: var(--white);
+  padding: 1rem 2rem 5rem 2rem; /* Added bottom padding for the tab effect */
+  position: relative;
+  z-index: 10;
+}
+
+.topRight {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logoImage {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  mix-blend-mode: screen; /* Helps remove the black background from the logo */
+  filter: saturate(1.4);
+}
+
+.companyName {
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: -0.02em; /* Pragmatica Extended look */
+  text-transform: none; /* Reference shows "Black Bear Family" title case or script, user requested name of company text */
+}
+
+.socialsInline {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.miniSocial {
+  width: 18px;
+  height: 18px;
+  color: var(--white);
+  opacity: 0.8;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.miniSocial:hover {
+  opacity: 1;
+}
+
+.navLink {
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.plus {
+  color: var(--secondary);
+  font-size: 1rem;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 2px;
+  background-color: var(--white);
+}
+
+.hamburger span:nth-child(2) {
+  width: 18px;
+}
+
+.hamburger span:nth-child(3) {
+  width: 22px;
+}

@@ -1,0 +1,169 @@
+.mockupContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+  color: #231F20;
+  padding: 0 5vw; /* Fluid side padding */
+  position: relative;
+  overflow: hidden;
+  font-family: var(--font-brix-sans), sans-serif;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 1400px;
+  margin-top: -5vh; /* Responsive vertical shift */
+}
+
+.logoWrapper {
+  margin-bottom: clamp(24px, 5vh, 48px);
+  opacity: 0;
+  animation: a-jelly 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.logo {
+  width: clamp(80px, 10vw, 110px);
+  height: auto;
+  filter: saturate(1.1);
+}
+
+.textStrapper {
+  overflow: hidden;
+  margin-bottom: clamp(2px, 0.5vh, 6px);
+}
+
+.title {
+  font-family: var(--font-averta), sans-serif;
+  font-size: clamp(36px, 8vw, 82px);
+  font-weight: 900;
+  margin-bottom: clamp(24px, 6vh, 48px); /* Reduced top gap as requested */
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  text-transform: none;
+  opacity: 0;
+  animation: a-popUp 0.8s cubic-bezier(0, 1, 0.5, 1) forwards;
+  animation-delay: 0.3s;
+}
+
+.subtitle {
+  font-size: clamp(20px, 3.2vw, 32px); /* Slightly bigger as requested */
+  font-weight: 400;
+  color: #231F20;
+  margin-bottom: 0;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+  opacity: 0;
+  animation: a-popUp 0.8s cubic-bezier(0, 1, 0.5, 1) forwards;
+}
+
+.sub1 {
+  animation-delay: 0.6s;
+}
+
+.sub2 {
+  animation-delay: 0.7s;
+}
+
+.scrollHint {
+  position: absolute;
+  top: clamp(580px, 72vh, 1000px); /* Nudged down slightly */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0;
+  animation: fadeIn 1.1s ease-out forwards;
+  animation-delay: 1.4s;
+}
+
+.dotLine {
+  width: 1px;
+  height: 600px;
+  background: repeating-linear-gradient(to bottom,
+      #000,
+      #000 2px,
+      transparent 2px,
+      transparent 14px);
+  background-size: 1px 28px;
+  animation: 
+    growLine 2.5s ease-out forwards,
+    travelingDots 30s linear infinite;
+}
+
+@keyframes travelingDots {
+  from { background-position: 0 0; }
+  to { background-position: 0 1000px; }
+}
+
+@keyframes a-jelly {
+  0% { transform: scale(0); opacity: 0; }
+  70% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes a-popUp {
+  0% { opacity: 0; transform: translateY(100%); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes growLine {
+  from { height: 0; opacity: 0; }
+  to { height: 600px; opacity: 1; }
+}
+
+/* Specific Tablet/Laptop Optimization (1200x800ish) */
+@media (max-width: 1200px) and (min-width: 769px) {
+  .heroContent {
+    margin-top: -12vh; /* Slightly more shift up */
+  }
+  
+  .scrollHint {
+    top: 58vh; /* Nudged down slightly as requested */
+  }
+}
+
+/* Mobile & Tablet Granular Refinement */
+@media (max-width: 768px) {
+  .heroContent {
+    margin-top: -5vh; 
+  }
+
+  .title {
+    letter-spacing: -0.02em;
+    margin-bottom: 30px;
+  }
+
+  .scrollHint {
+    top: auto;
+    bottom: -400px; /* Let it flow off the screen */
+  }
+
+  .dotLine {
+    height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 32px;
+    line-height: 1.1;
+  }
+
+  .subtitle {
+    font-size: 17px;
+    padding: 0 10px;
+  }
+}
